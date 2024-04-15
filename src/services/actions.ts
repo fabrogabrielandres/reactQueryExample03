@@ -33,9 +33,11 @@ export const fetchProductById = async({id}:GetProductOptions): Promise<Product> 
     return data    
 }
 
-export const createProduct = async (newProduct: ProductLike)=>{
-    await sleep(2)
-    const { data } = await productsApi.post<Product>("/products",{newProduct})
-    console.log("create product",data);  
+export const createProduct = async (newProduct: ProductLike):Promise<Product>=>{
+    await sleep(5)
+    throw new Error("algo pasa")
+    const { data } = await productsApi.post<Product>("/products",newProduct)
+    console.log("create product",data); 
+    return data 
 
 }

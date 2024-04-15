@@ -1,6 +1,5 @@
 import { Button, Image, Input } from "@nextui-org/react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { createProduct } from "../../services/actions";
 import { useProductMutation } from "../../Hooks/useProductMutation";
 interface IFormInputs {
   title:       string;

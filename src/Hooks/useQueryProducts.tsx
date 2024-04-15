@@ -7,7 +7,7 @@ interface Options{
 
 export const useQueryProducts = ({filterKey}:Options) => {
     
-    const {data:products=[] , error, isError, isFetching, isLoading} = useQuery({queryKey:["products",{filterKey}],queryFn:()=>fetchProducts({filterKey}),
+    const {data:products=[] , error, isError, isFetching, isLoading} = useQuery({queryKey:["products",{'filterKey':filterKey}],queryFn:()=>fetchProducts({filterKey}),
     staleTime: 1000 * 60 * 60 //1 hora 
 
 })
